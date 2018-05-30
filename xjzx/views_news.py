@@ -7,4 +7,4 @@ news_blueprint = Blueprint('news', __name__)
 # 首页
 @news_blueprint.route('/')
 def index():
-    return render_template('news/index.html')
+    return render_template('news/index.html', title='首页-新经资讯')

@@ -1,9 +1,10 @@
-from flask_sqlalchemy import SQLAlchemy
+from flask_sqlalchemy import SQLAlchemy, current_app
 import pymysql
 from werkzeug.security import generate_password_hash, check_password_hash
 
 pymysql.install_as_MySQLdb()
 from datetime import datetime
+
 
 db = SQLAlchemy()
 
@@ -102,6 +103,11 @@ class UserInfo(db.Model, BaseModel):
 
     def check_pwd(self, pwd):
         return check_password_hash(self.password_hash, pwd)
+
+    @property
+    def avatar_url(self):
+        url = current_app.config.get('QINIU_URL')
+        return url + self.avatar
 
 
 # 新闻１：ｎ新闻评论, 新闻评论1:n用户, 用户评论１: n用户评论

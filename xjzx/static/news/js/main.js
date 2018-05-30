@@ -111,7 +111,7 @@ $(function(){
         // 发起登录请求
         $.post('/user/login',{
             csrf_token:csrf_token,
-            user_id:mobile,
+            mobile:mobile,
             pwd:password
         },function (data) {
             if (data.result==1){
@@ -197,13 +197,19 @@ $(function(){
         $.post('/user/logout',
             {csrf_token:$('#csrf_token').val()},
             function (data) {
-            if (data.result==1){
-                $('.user_btns').show();
-                $('.user_login').hide();
-            }
+                if (data.result==1){
+                    if (location.pathname=='/user/'){
+                        location.href='/';
+                    }
+                    else{
+                        $('.user_btns').show();
+                        $('.user_login').hide();
+                    }
+                }
         });
         return false;
     });
+
 });
 
 
