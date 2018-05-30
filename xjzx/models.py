@@ -11,8 +11,8 @@ db = SQLAlchemy()
 
 # 创建一个类定义共同字段
 class BaseModel(object):
-    create_time = db.Column(db.DateTime, default=datetime.now())
-    update_time = db.Column(db.DateTime, default=datetime.now())
+    create_time = db.Column(db.DateTime, default=datetime.now)
+    update_time = db.Column(db.DateTime, default=datetime.now)
     isDelete = db.Column(db.Boolean, default=False)
 
 
@@ -40,6 +40,10 @@ class NewsInfo(db.Model, BaseModel):
     user_id = db.Column(db.Integer, db.ForeignKey('user_info.id'))
     # 新闻１：ｎ新闻评论
     comments = db.relationship('NewsComment', backref='news', lazy='dynamic', order_by='NewsComment.id.desc()')
+    @property
+    def pic_url(self):
+        url = current_app.config.get('QINIU_URL')
+        return url + self.pic
 
 
 # 新闻m:n用户（收藏关系表）

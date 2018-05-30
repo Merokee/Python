@@ -10,7 +10,7 @@
     <script type="text/javascript" src="/static/news/js/user_pic_info.js"></script>
 </head>
 <body class="inframe_body">
-    <form class="pic_info">
+    <form class="pic_info" method="post" enctype="multipart/form-data">
         <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
         <h3>头像设置</h3>
         <div class="form-group">

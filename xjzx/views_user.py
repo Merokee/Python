@@ -1,5 +1,5 @@
 import random
-from models import db, UserInfo
+from models import db, UserInfo, NewsInfo, NewsCategory
 import re
 from utils.ytx_sdk import ytx_send
 from flask import Blueprint, session, jsonify, current_app, render_template, redirect
@@ -8,6 +8,7 @@ from flask import request
 import functools
 from utils.upload_pic import upload_pic
 from utils.captcha.captcha import captcha
+from datetime import datetime
 
 user_blueprint = Blueprint('user', __name__, url_prefix='/user')
 
@@ -161,7 +162,7 @@ def base():
         # 修改数据库的值
         user.signature = signature
         user.nick_name = nick_name
-        user.gender = bool(gender)
+        user.gender = True if gender=='True' else False
         try:
             db.session.commit()
         except:
@@ -194,32 +195,137 @@ def pic():
 @user_blueprint.route('/follow')
 @login_requires
 def follow():
-    return render_template('news/user_follow.html')
+    user_id = session['user_id']
+    user = UserInfo.query.get(user_id)
+    # 获取当前页码
+    page = int(request.args.get('page', '1'))
+    # 分页显示
+    pagination = user.follow_user.paginate(page, 4, False)
+    user_list = pagination.items
+    total_page = pagination.pages
+
+    return render_template(
+        'news/user_follow.html',
+        user_list=user_list,
+        total_page=total_page,
+        page=page)
 
 
 # 密码修改
-@user_blueprint.route('/pwd')
+@user_blueprint.route('/pwd', methods=['GET', 'POST'])
 @login_requires
 def pwd():
-    return render_template('news/user_pass_info.html')
+    # 展示页面
+    if request.method == 'GET':
+        return render_template('news/user_pass_info.html')
+
+    # 修改密码
+    elif request.method == 'POST':
+        user_id = session['user_id']
+        user = UserInfo.query.get(user_id)
+        # 获取当前密码，新密码和确认密码
+        dict1 = request.form
+        pwd = dict1.get('pwd', '')
+        new_pwd = dict1.get('new_pwd', '')
+        sure_pwd = dict1.get('sure_pwd', '')
+
+        # 逻辑判断
+        if not re.match(r'[a-zA-Z0-9_]{6,20}', pwd):
+            return render_template('news/user_pass_info.html', msg='密码错误！')
+
+        if not all([pwd, new_pwd, sure_pwd]):
+            return render_template('news/user_pass_info.html', msg='密码不能为空！')
+
+        if new_pwd!=sure_pwd:
+            return render_template('news/user_pass_info.html', msg='确认密码输入错误！')
+
+        user.password = pwd
+        try:
+            db.session.commit()
+        except:
+            current_app.logger_xjzx.error('修改密码时，访问数据库失败')
+            return render_template('news/user_pass_info.html', msg='服务器睡着了，修改密码失败！')
+        return render_template('news/user_pass_info.html', msg='修改密码成功！')
 
 
 # 我的收藏
 @user_blueprint.route('/collection')
 @login_requires
 def collection():
-    return render_template('news/user_collection.html')
+    user_id = session['user_id']
+    user = UserInfo.query.get(user_id)
+    page = int(request.args.get('page', '1'))
+    pagination = user.news_collect.order_by(NewsInfo.update_time.desc()).paginate(page, 6, False)
+    total_page = pagination.pages
+    collect_list = pagination.items
+    return render_template(
+        'news/user_collection.html',
+        collect_list=collect_list,
+        total_page=total_page,
+        page=page)
 
 
 # 新闻发布
-@user_blueprint.route('/release')
+@user_blueprint.route('/release', methods=['GET', 'POST'])
 @login_requires
 def release():
-    return render_template('news/user_news_release.html')
+    news = None
+    news_id = request.args.get('news_id')
+    category_list = NewsCategory.query.all()
+    # 编辑
+    if request.method == 'GET':
+        if news_id is None:
+            return render_template('news/user_news_release.html', news=news, category_list=category_list)
+        # 从新闻列表跳转
+        else:
+            news = NewsInfo.query.get(news_id)
+            return render_template('news/user_news_release.html', news=news, category_list=category_list)
+    elif request.method == 'POST':
+        dict1 = request.form
+        title = dict1.get('title')
+        category = int(dict1.get('category'))
+        summary = dict1.get('summary')
+        pic = request.files.get('pic')
+        content = dict1.get('content')
+        if news_id:
+            if not all([title, category, summary, pic, content]):
+                return render_template('news/user_news_release.html', news=news, msg='请完善新闻信息', category_list=category_list)
+            news = NewsInfo.query.get(news_id)
+        else:
+            if not all([title, category, summary, content]):
+                return render_template('news/user_news_release.html',
+                                       news=news, msg='请完善新闻信息',
+                                       category_list=category_list)
+            news = NewsInfo()
+        if pic:
+            news.pic = upload_pic(pic)
+        news.title = title
+        news.summary =summary
+        news.content = content
+        news.status = 1
+        news.update_time = datetime.now()
+        news.category_id = category
+        news.user_id = session['user_id']
+        try:
+            db.session.add(news)
+            db.session.commit()
+        except:
+            current_app.logger_xjzx.error('修改新闻内容时，访问数据库失败')
+            return render_template('news/user_pass_info.html', msg='服务器睡着了，修改新闻内容失败！')
+        else:
+            return redirect('/user/newslist')
 
 
 # 新闻列表
 @user_blueprint.route('/newslist')
 @login_requires
 def newslists():
-    return render_template('news/user_news_list.html')
+    user_id = session['user_id']
+    user = UserInfo.query.get(user_id)
+    page = int(request.args.get('page', '1'))
+    pagination = user.news.order_by(NewsInfo.update_time.desc()).paginate(page, 6, False)
+    total_page = pagination.pages
+    news_list = pagination.items
+    return render_template('news/user_news_list.html',
+                           page=page, news_list=news_list,
+                           total_page=total_page)
