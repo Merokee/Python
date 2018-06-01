@@ -126,7 +126,7 @@ $(function(){
             else if (data.result==3){
                 $('.login_form_con').hide();
                 $('.user_btns').hide();
-                $('.lgin_pic').attr('src','/static/news/images/'+data.avatar);
+                $('.lgin_pic').attr('src',data.avatar);
                 $('#user').html(data.nick_name);
                 $('.user_login').show();
             }

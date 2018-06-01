@@ -7,30 +7,45 @@
     <link rel="stylesheet" type="text/css" href="/static/news/css/main.css">
     <script type="text/javascript" src="/static/news/js/jquery-1.12.4.min.js"></script>
     <script type="text/javascript" src="/static/news/js/main.js"></script>
-    <script type="text/javascript" src="/static/news/js/index.js"></script>
+
     {% block head %}
     {% endblock %}
 </head>
 <body>
     <div class="header_con">
         <div class="header">
-            <a href="#" class="logo fl"><img src="/static/news/images/logo.png" alt="logo"></a>
-            <ul class="menu fl">
-                <li class="active" data-cid="0"><a href="javascript:;">最新</a></li>
-                <li data-cid="1"><a href="javascript:;">股市</a></li>
-                <li data-cid="2"><a href="javascript:;">债市</a></li>
-                <li data-cid="3"><a href="javascript:;">商品</a></li>
-                <li data-cid="4"><a href="javascript:;">外汇</a></li>
-                <li data-cid="5"><a href="javascript:;">公司</a></li>
-            </ul>
+            <a href="/" class="logo fl"><img src="/static/news/images/logo.png" alt="logo"></a>
+            {% block menu %}
+            {% endblock %}
+            {% if not user %}
+            <div class="user_btns fr" style="display: block">
+                <a href="javascript:;" class="login_btn">登录</a> / <a href="javascript:;" class="register_btn">注册</a>
+            </div>
 
             <!-- 用户登录后显示下面，隐藏上面 -->
-            <div class="user_login fr" style="display: block">
+            <div class="user_login fr">
+
                 <img src="{{ user.avatar_url }}" class="lgin_pic">
+
                 <a href="/user" id="user">{{ user.nick_name }}</a>
                 <a href="javascript:;" id="exit">退出</a>
             </div>
+            {% elif user %}
+            <div class="user_btns fr" style="display: none">
+                <a href="javascript:;" class="login_btn">登录</a> / <a href="javascript:;" class="register_btn">注册</a>
+            </div>
+
+            <!-- 用户登录后显示下面，隐藏上面 -->
+            <div class="user_login fr" style="display: block">
+
+                <img src="{{ user.avatar_url }}" class="lgin_pic">
+
+                <a href="/user" id="user">{{ user.nick_name }}</a>
+                <a href="javascript:;" id="exit">退出</a>
+            </div>
+            {% endif %}
         </div>
+
     </div>
     {% block body %}
     {% endblock %}

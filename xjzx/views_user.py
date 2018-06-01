@@ -106,7 +106,7 @@ def login():
     else:
         if user.check_pwd(pwd):
             session['user_id'] = user.id
-            return jsonify(result=3, avatar=user.avatar, nick_name=user.nick_name)
+            return jsonify(result=3, avatar=user.avatar_url, nick_name=user.nick_name)
         else:
             return jsonify(result=4)  # 密码错误
 
@@ -272,14 +272,22 @@ def release():
     news = None
     news_id = request.args.get('news_id')
     category_list = NewsCategory.query.all()
-    # 编辑
+    # 展示页面
     if request.method == 'GET':
+        # 展示发布（无内容）
         if news_id is None:
-            return render_template('news/user_news_release.html', news=news, category_list=category_list)
-        # 从新闻列表跳转
+            return render_template(
+                'news/user_news_release.html',
+                news=news,
+                category_list=category_list)
+        # 从新闻列表跳转过来，展示编辑（有内容）
         else:
             news = NewsInfo.query.get(news_id)
-            return render_template('news/user_news_release.html', news=news, category_list=category_list)
+            return render_template(
+                'news/user_news_release.html',
+                news=news,
+                category_list=category_list)
+    # 表单提交
     elif request.method == 'POST':
         dict1 = request.form
         title = dict1.get('title')
@@ -287,18 +295,25 @@ def release():
         summary = dict1.get('summary')
         pic = request.files.get('pic')
         content = dict1.get('content')
+        # 编辑 不一定跟换图片
         if news_id:
-            if not all([title, category, summary, pic, content]):
-                return render_template('news/user_news_release.html', news=news, msg='请完善新闻信息', category_list=category_list)
-            news = NewsInfo.query.get(news_id)
-        else:
             if not all([title, category, summary, content]):
+                return render_template(
+                    'news/user_news_release.html',
+                    news=news, msg='请完善新闻信息',
+                    category_list=category_list)
+            news = NewsInfo.query.get(news_id)
+        # 发布 需要提交图片 并新建对象
+        else:
+            if not all([title, category, summary, pic, content]):
                 return render_template('news/user_news_release.html',
                                        news=news, msg='请完善新闻信息',
                                        category_list=category_list)
             news = NewsInfo()
+        # 有图片上传到七牛云
         if pic:
             news.pic = upload_pic(pic)
+        # 给属性赋值，注意update_time,user_id字段必需赋值
         news.title = title
         news.summary =summary
         news.content = content
@@ -306,6 +321,7 @@ def release():
         news.update_time = datetime.now()
         news.category_id = category
         news.user_id = session['user_id']
+        # 保存成功转到新闻列表
         try:
             db.session.add(news)
             db.session.commit()
