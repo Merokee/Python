@@ -297,17 +297,17 @@ body{
 	color:#39f;
 }
 
-.rank_list li .count1{
+.rank_list li .first{
 	background: #f33;
 	color:#fff;
 }
 
-.rank_list li .count2{
+.rank_list li .second{
 	background:#ff722b;
 	color:#fff;
 }
 
-.rank_list li .count3{
+.rank_list li .third{
 	background:#fa3;
 	color:#fff;
 }
@@ -659,7 +659,7 @@ body{
 	color:#666;
 	border-radius:4px;
 	font-size:14px;
-	margin:0px 5px;
+	margin:0px auto;
 	background:url(../images/collect_icons.png) 15px -73px no-repeat #e6e6e6;
 	position:relative;
 	overflow:hidden;

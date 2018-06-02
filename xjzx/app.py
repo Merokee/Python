@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, render_template
 from views_user import user_blueprint
 from views_news import news_blueprint
 from views_admin import admin_blueprint
@@ -30,6 +30,12 @@ def create_app(config):
     # 为全局的日志工具对象（flask app使用的）添加日志记录器
     logging.getLogger().addHandler(file_log_handler)
     app.logger_xjzx = logging
+
+
+    # 处理404异常
+    @app.errorhandler(404)
+    def handle404(e):
+        return render_template('news/404.html')
 
     return app
 

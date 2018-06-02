@@ -1,0 +1,15 @@
+{% macro rank(news_rank) %}
+<div class="rank_title">
+    <h3>点击排行</h3>
+</div>
+<ul class="rank_list">
+    {% for news in news_rank %}
+        {% if loop.index<4 %}
+            <li><span class="count{{ loop.index }}">{{ loop.index }}</span><a href="/{{ news.id }}">{{ news.title }}</a>
+            </li>
+        {% else %}
+            <li><span>{{ loop.index }}</span><a href="/{{ news.id }}">{{ news.title }}</a></li>
+        {% endif %}
+    {% endfor %}
+</ul>
+{% endmacro %}
