@@ -94,29 +94,87 @@ $(function(){
         if(sHandler.indexOf('comment_up')>=0)
         {
             var $this = $(this);
+            var action = 1;
             if(sHandler.indexOf('has_comment_up')>=0)
             {
                 // 如果当前该评论已经是点赞状态，再次点击会进行到此代码块内，代表要取消点赞
-                $this.removeClass('has_comment_up')
+                action = 2;
+
             }else {
-                $this.addClass('has_comment_up')
+                action = 1;
+
             }
+            $.post('/commentup',{
+                'csrf_token':$('#csrf_token').val(),
+                'comment_id':$this.attr('comment_id'),
+                'action':action
+            },function (data) {
+                if (data.result==1){
+                    ('.login_btn').click();
+                }else if (data.result==2){
+                    if (action==1){
+                        $this.addClass('has_comment_up');
+                    }else{
+                        $this.removeClass('has_comment_up');
+                    }
+                    $this.find('em').text(data.like_count);
+                }
+            })
         }
 
         if(sHandler.indexOf('reply_sub')>=0)
         {
-            alert('回复评论')
+            var $thisa=$(this);
+            $.post('/replycomment',{
+                'csrf_token':$('#csrf_token').val(),
+                'comment_id':$thisa.attr('comment_id'),
+                'msg':$thisa.prev().val(),
+                'news_id':$('#news_id').val()
+            },function (data) {
+                if (data.result==2){
+                    alert('回复不能为空！')
+                }else if (data.result==3){
+                    $thisa.prev().val('');
+                    $thisa.parent().hide();
+                    show_comments();
+                }
+            });
+
         }
     });
 
         // 关注当前新闻作者
     $(".focus").click(function () {
-
+        $.post('/userfollow',{
+            'csrf_token':$('#csrf_token').val(),
+            'action':1,
+            'follow_user_id':$('#follow_user_id').val()
+        },function (data) {
+            if (data.result==1){
+                ('.login_btn').click();
+            }else if (data.result==2){
+                $('.focus').hide();
+                $('.focused').show();
+                $('.follows b').text(data.follow_count)
+            }
+        })
     });
 
     // 取消关注当前新闻作者
     $(".focused").click(function () {
-
+        $.post('/userfollow',{
+            'csrf_token':$('#csrf_token').val(),
+            'action':2,
+            'follow_user_id':$('#follow_user_id').val()
+        },function (data) {
+            if (data.result==1){
+                ('.login_btn').click();
+            }else if (data.result==2){
+                $('.focus').show();
+                $('.focused').hide();
+                $('.follows b').text(data.follow_count)
+            }
+        })
     })
 });
 

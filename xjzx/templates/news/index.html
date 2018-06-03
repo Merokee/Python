@@ -19,7 +19,7 @@
             <li v-for="news in news_list">
                 <a :href="'/'+[[news.id]]" class="news_pic fl"><img :src="[[news.pic_url]]" ></a>
                 <a :href="'/'+[[news.id]]" class="news_title fl">[[news.title]]</a>
-                <a :href="'/'[[news.id]]" class="news_detail fl">[[news.content]]</a>
+                <a :href="'/'[[news.id]]" class="news_detail fl" >[[news.summary]]</a>
                 <div class="author_info fl">
                     <div class="author fl">
                         <img :src="[[news.user_avatar_url]]" alt="author" style="width: 40px;height: 40px;">

@@ -3,7 +3,7 @@ from models import db, UserInfo, NewsInfo, NewsCategory
 import re
 from utils.ytx_sdk import ytx_send
 from flask import Blueprint, session, jsonify, current_app, render_template, redirect
-from flask import make_response
+from flask import make_response, abort
 from flask import request
 import functools
 from utils.upload_pic import upload_pic
@@ -344,4 +344,26 @@ def newslists():
     news_list = pagination.items
     return render_template('news/user_news_list.html',
                            page=page, news_list=news_list,
+                           total_page=total_page)
+
+
+# 作者页
+@user_blueprint.route('/<int:author_id>')
+def other(author_id):
+    user = None
+    author = UserInfo.query.get(author_id)
+    if author is None:
+        abort(404)
+    if 'user_id' in session:
+        user= UserInfo.query.get(session['user_id'])
+    page = int(request.args.get('page', '1'))
+    pagination = author.news.order_by(NewsInfo.update_time.desc()).paginate(page, 6, False)
+    total_page = pagination.pages
+    news_list = pagination.items
+    return render_template('news/other.html',
+                           title='用户概况',
+                           user=user,
+                           author=author,
+                           page=page,
+                           news_list=news_list,
                            total_page=total_page)

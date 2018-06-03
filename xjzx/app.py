@@ -6,6 +6,7 @@ import logging   # 引入python自带的日志包
 from logging.handlers import RotatingFileHandler
 from flask_wtf.csrf import CSRFProtect
 from flask_session import Session
+import redis
 
 
 def create_app(config):
@@ -31,11 +32,16 @@ def create_app(config):
     logging.getLogger().addHandler(file_log_handler)
     app.logger_xjzx = logging
 
-
     # 处理404异常
     @app.errorhandler(404)
     def handle404(e):
         return render_template('news/404.html')
+
+    # 连接rides数据库
+    host = app.config.get('REDIS_HOST')
+    port = app.config.get('REDIS_PORT')
+    redis_db = app.config.get('REDIS_DB')
+    app.redis = redis.StrictRedis(host=host, port=port, db=redis_db)
 
     return app
 

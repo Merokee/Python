@@ -1,6 +1,6 @@
 from flask import Blueprint, jsonify, request, current_app
 from flask import render_template, session, abort
-from models import db, UserInfo, NewsCategory, NewsInfo, NewsComment
+from models import db, UserInfo, NewsCategory, NewsInfo, NewsComment, tb_news_collect
 
 news_blueprint = Blueprint('news', __name__)
 
@@ -33,9 +33,9 @@ def newslist():
     news_list = pagination.items
     news_list1 = []
     for news in news_list:
-        dict1 = {'id': news.id, 'pic_url': news.pic_url, 'title': news.title, 'content': news.content,
+        dict1 = {'id': news.id, 'pic_url': news.pic_url, 'title': news.title, 'summary': news.summary,
                  'user_avatar_url': news.user.avatar_url, 'user_id': news.user_id,
-                 'user_nick_name': news.user.nick_name, 'update_time': news.update_time}
+                 'user_nick_name': news.user.nick_name, 'update_time': news.update_time.strftime('%Y-%m-%d %H:%M:%S')}
         news_list1.append(dict1)
     return jsonify(news_list=news_list1, page=page)
 
@@ -81,6 +81,7 @@ def collection(news_id):
         if news in user.news_collect:
             return jsonify(result=3)  # 判断是否已经收藏
         user.news_collect.append(news)
+
     try:
         db.session.commit()
     except:
@@ -130,17 +131,100 @@ def comment():
 # 显示评论
 @news_blueprint.route('/comment/show')
 def show_comments():
+    user_id = session.get('user_id')
     news_id = request.args.get('news_id')
-    news = NewsInfo.query.get(news_id)
-    if news is None:
-        return jsonify(result=1)
-    comment_list = news.comments.order_by(NewsComment.update_time.desc())
+    comment_list = NewsComment.query.filter_by(news_id=news_id,comment_id=None).order_by(NewsComment.update_time.desc())
     comment_list1 = []
+    up_list = current_app.redis.lrange('commentup%d'%user_id, 0, -1)
+    up_list = [int(cid) for cid in up_list]
     for comment in comment_list:
+        if comment.id in up_list:
+            is_like = 1
+        else:
+            is_like = 0
+        reply_list = comment.comments
+        reply_list1=[]
+        for reply in reply_list:
+            dict2 = {
+                'nick_name':reply.user.nick_name,
+                'msg':reply.msg
+            }
+            reply_list1.append(dict2)
         dict1 = {'user_avatar_url': comment.user.avatar_url,
                  'user_nick_name': comment.user.nick_name,
                  'comment': comment.msg,
-                 'create_time': comment.create_time}
+                 'create_time': comment.create_time.strftime('%Y-%m-%d %H:%M:%S'),
+                 'id': comment.id,
+                 'like_count': comment.like_count,
+                 'is_like':is_like,
+                 'reply_list':reply_list1
+                 }
         comment_list1.append(dict1)
     return jsonify(result=2,
                    comment_list=comment_list1)
+
+
+# 关注取消关注
+@news_blueprint.route('/userfollow', methods=['POST'])
+def userfollow():
+    dict1 = request.form
+    follow_user_id = dict1.get('follow_user_id')
+    action = int(dict1.get('action'))
+    if 'user_id' not in session:
+        return jsonify(result=1)
+    origin_user = UserInfo.query.get(int(session['user_id']))
+    follow_user = UserInfo.query.get(int(follow_user_id))
+    if action == 1:
+        follow_user.follow_count += 1
+        origin_user.follow_user.append(follow_user)
+    else:
+        follow_user.follow_count -= 1
+        origin_user.follow_user.remove(follow_user)
+    db.session.commit()
+    return jsonify(result=2, follow_count=follow_user.follow_count)
+
+
+# 点赞/取消点赞
+@news_blueprint.route('/commentup', methods=['POST'])
+def commentup():
+    if 'user_id' not in session:
+        return jsonify(result=1)
+    user_id = session['user_id']
+    dict1 = request.form
+    action = int(dict1['action'])
+    comment_id = int(dict1['comment_id'])
+    comment = NewsComment.query.get(comment_id)
+
+    if action == 1:
+        # 点赞
+        current_app.redis.lpush('commentup%d' % user_id, comment_id)
+        comment.like_count += 1
+    else:
+        # lrem key count value
+        current_app.redis.lrem('commentup%d' % user_id, 0, comment_id)
+        # 取消点赞
+        comment.like_count -= 1
+    db.session.commit()
+    return jsonify(result=2, like_count=comment.like_count)
+
+
+# 回复评论
+@news_blueprint.route('/replycomment', methods=['POST'])
+def replycomment():
+    if 'user_id' not in session:
+        return jsonify(result=1)
+    user_id = session['user_id']
+    dict1 = request.form
+    comment_id = int(dict1['comment_id'])
+    msg = dict1['msg']
+    news_id = int(dict1['news_id'])
+    if not all([comment_id, msg, news_id]):
+        return jsonify(result=2)
+    comment = NewsComment()
+    comment.comment_id=comment_id
+    comment.msg = msg
+    comment.user_id = user_id
+    comment.news_id = news_id
+    db.session.add(comment)
+    db.session.commit()
+    return jsonify(result=3)
