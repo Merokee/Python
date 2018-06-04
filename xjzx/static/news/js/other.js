@@ -18,7 +18,7 @@ $(function(){
             'follow_user_id':$('#follow_user_id').val()
         },function (data) {
             if (data.result==1){
-                ('.login_btn').click();
+                $('.login_btn').click();
             }else if (data.result==2){
                 $('.focus').hide();
                 $('.focused').show();

@@ -3,6 +3,7 @@ from app import create_app
 from flask_script import Manager
 from config import DevelopConfig
 from models import db
+from super_command import CreateAdminUser, UserLogin, RegisterUser
 
 app = create_app(DevelopConfig)
 
@@ -15,6 +16,9 @@ db.init_app(app)
 # 数据库迁移　
 Migrate(app, db)
 manager.add_command('db', MigrateCommand)
+manager.add_command('createadmin', CreateAdminUser)
+manager.add_command('userlogin',UserLogin)
+manager.add_command('registeruser', RegisterUser)
 
 if __name__ == '__main__':
     manager.run()

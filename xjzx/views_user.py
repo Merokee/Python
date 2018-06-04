@@ -106,6 +106,24 @@ def login():
     else:
         if user.check_pwd(pwd):
             session['user_id'] = user.id
+            # 修改登陆时间
+            user.update_time = datetime.now()
+            # 取出redis中的值加1再保存
+            now = datetime.now()
+            hour_list = ["08:15", "09:15", "10:15", "11:15", "12:15", "13:15", "14:15", "15:15", "16:15", "17:15",
+                         "18:15", "19:15"]
+            key = 'login%d_%d_%d' % (now.year, now.month, now.day)
+            for index, item in enumerate(hour_list):
+
+                if now.hour <= index + 8 or (now.hour == index + 8 and now.minute <= 15):
+                    count = int(current_app.redis.hget(key, item))
+                    count += 1
+                    current_app.redis.hset(key, item, count)
+                    break
+            else:
+                count = int(current_app.redis.hget(key, "19:15"))
+                count += 1
+                current_app.redis.hset(key, "19:15", count)
             return jsonify(result=3, avatar=user.avatar_url, nick_name=user.nick_name)
         else:
             return jsonify(result=4)  # 密码错误
@@ -134,6 +152,7 @@ def login_requires(f1):
         if 'user_id' not in session:
             return redirect('/')
         return f1(*args, **kwargs)
+
     return func1
 
 
@@ -162,7 +181,7 @@ def base():
         # 修改数据库的值
         user.signature = signature
         user.nick_name = nick_name
-        user.gender = True if gender=='True' else False
+        user.gender = True if gender == 'True' else False
         try:
             db.session.commit()
         except:
@@ -236,7 +255,7 @@ def pwd():
         if not all([pwd, new_pwd, sure_pwd]):
             return render_template('news/user_pass_info.html', msg='密码不能为空！')
 
-        if new_pwd!=sure_pwd:
+        if new_pwd != sure_pwd:
             return render_template('news/user_pass_info.html', msg='确认密码输入错误！')
 
         user.password = pwd
@@ -315,7 +334,7 @@ def release():
             news.pic = upload_pic(pic)
         # 给属性赋值，注意update_time,user_id字段必需赋值
         news.title = title
-        news.summary =summary
+        news.summary = summary
         news.content = content
         news.status = 1
         news.update_time = datetime.now()
@@ -355,7 +374,7 @@ def other(author_id):
     if author is None:
         abort(404)
     if 'user_id' in session:
-        user= UserInfo.query.get(session['user_id'])
+        user = UserInfo.query.get(session['user_id'])
     page = int(request.args.get('page', '1'))
     pagination = author.news.order_by(NewsInfo.update_time.desc()).paginate(page, 6, False)
     total_page = pagination.pages

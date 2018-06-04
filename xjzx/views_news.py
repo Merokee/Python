@@ -177,7 +177,7 @@ def userfollow():
     if action == 1:
         follow_user.follow_count += 1
         origin_user.follow_user.append(follow_user)
-    else:
+    elif action == 2:
         follow_user.follow_count -= 1
         origin_user.follow_user.remove(follow_user)
     db.session.commit()
@@ -228,3 +228,31 @@ def replycomment():
     db.session.add(comment)
     db.session.commit()
     return jsonify(result=3)
+
+
+# 获取收藏状态
+@news_blueprint.route('/collected_status')
+def collected_status():
+    news=None
+    news_id = request.args.get('news_id')
+    if news_id:
+        news = NewsInfo.query.get(int(news_id))
+    user = UserInfo.query.get(session['user_id'])
+    if news in user.news_collect:
+        return jsonify(result=1)
+    else:
+        return jsonify(result=0)
+
+
+# 获取关注状态
+@news_blueprint.route('/focused_status')
+def focused_status():
+    follow_user_id = int(request.args.get('follow_user_id'))
+    follow_user = UserInfo.query.get(follow_user_id)
+    user = UserInfo.query.get(session['user_id'])
+    if follow_user is None:
+        abort(404)
+    if follow_user in user.follow_user:
+        return jsonify(result=1)
+    else:
+        return jsonify(result=0)
