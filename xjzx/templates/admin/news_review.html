@@ -1,55 +1,85 @@
-{% include 'admin/head.html' %}
-	<link rel="stylesheet" href="/static/admin/css/jquery.pagination.css">
-	<script type="text/javascript" src="/static/admin/js/jquery-1.12.4.min.js"></script>
-	<script type="text/javascript" src="/static/admin/js/jquery.pagination.min.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% include 'admin/head.html' %}
 </head>
 <body>
-	<div class="breadcrub">
-			当前位置：新闻管理>新闻审核
-			<form class="news_filter_form">
-				<input type="text" placeholder="请输入关键字" class="input_txt">
-				<input type="submit" value="搜 索" class="input_sub">
-			</form>
-		</div>
-		<div class="pannel">
-			<table class="common_table">
-				<tr>
-					<th width="3%">id</th>
-					<th width="70%">标题</th>
-					<th width="15%">发布时间</th>
-					<th width="5%">状态</th>
-					<th width="8%">管理操作</th>
-				</tr>
-                {% for news in news_list %}
-				<tr>
-					<td>{{ news.id }}</td>
-					<td class="tleft">{{ news.title }}</td>
-					<td>{{ news.update_time }}</td>
-					<td>{{ news.status }}</td>
-					<td>
-						<a href="/static/admin/news_review_detail.html" class="review">审核</a>
-					</td>
-				</tr>
-			    {% endfor %}
-			</table>
-		</div>
+<div class="breadcrub">
+    当前位置：新闻管理>新闻审核
+    <form class="news_filter_form">
+        <input type="text" placeholder="请输入关键字" class="input_txt">
+        <input type="submit" value="搜 索" class="input_sub">
+    </form>
+</div>
+<div class="pannel">
+    <table class="common_table">
+        <tr>
+            <th width="3%">id</th>
+            <th width="70%">标题</th>
+            <th width="15%">发布时间</th>
+            <th width="5%">状态</th>
+            <th width="8%">管理操作</th>
+        </tr>
 
-		<div class="box">
-			<div id="pagination" class="page"></div>
-		</div>
+        <tr v-for="news in news_list">
+            <td>[[news.id ]]</td>
+            <td class="tleft">[[news.title]]</td>
+            <td>[[news.update_time]]</td>
+            <td v-if="news.status==1" style="color: yellow;">待审核</td>
+            <td v-else-if="news.status==2" style="color: green;">已通过</td>
+            <td v-else style="color: red;">未通过</td>
+            <td>
+                <a :href="'news_review_detail/' + news.id" class="review">审核</a>
+            </td>
+        </tr>
 
-        <script>
-			$(function() {
-				$("#pagination").pagination({
-					currentPage: 2,
-					totalPage: 3,
-					callback: function(current) {
-					    alert('ok!');
-					}
-				});
-			});
-		</script>
+    </table>
+</div>
 
-	
+<div class="box">
+    <div id="pagination" class="page"></div>
+</div>
+
+<script>
+    $(function () {
+        vue_news_list = new Vue({
+            el: '.common_table',
+            delimiters: ['[[', ']]'],
+            data: {
+                news_list: []
+            }
+        });
+        input_txt = '';
+        get_news_list(input_txt);
+        $('.news_filter_form').submit(function (e) {
+            e.preventDefault();
+            input_txt=$('.input_txt').val();
+            get_news_list(input_txt);
+        })
+    });
+function get_news_list(input_txt){
+    $.get('/admin/news_review_json',
+        {'input_txt':input_txt},
+        function (data) {
+        vue_news_list.news_list = data.news_list;
+        $("#pagination").pagination({
+            currentPage: 1,
+            totalPage: data.total_page,
+            callback: function (current) {
+                $.get('/admin/news_review_json',
+                    {'page':current,
+                    'input_txt':input_txt},
+                    function (data) {
+                    vue_news_list.news_list = data.news_list;
+                })
+            }
+        });
+    });
+}
+
+
+</script>
+
+
 </body>
 </html>

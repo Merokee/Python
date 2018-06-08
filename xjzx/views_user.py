@@ -116,7 +116,11 @@ def login():
             for index, item in enumerate(hour_list):
 
                 if now.hour <= index + 8 or (now.hour == index + 8 and now.minute <= 15):
-                    count = int(current_app.redis.hget(key, item))
+                    count = current_app.redis.hget(key, item)
+                    if count:
+                        count = int(count)
+                    else:
+                        count = 0  # 防止redis中无数据int方法报错
                     count += 1
                     current_app.redis.hset(key, item, count)
                     break
