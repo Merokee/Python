@@ -114,7 +114,6 @@ def login():
                          "18:15", "19:15"]
             key = 'login%d_%d_%d' % (now.year, now.month, now.day)
             for index, item in enumerate(hour_list):
-
                 if now.hour <= index + 8 or (now.hour == index + 8 and now.minute <= 15):
                     count = current_app.redis.hget(key, item)
                     if count:
@@ -125,7 +124,11 @@ def login():
                     current_app.redis.hset(key, item, count)
                     break
             else:
-                count = int(current_app.redis.hget(key, "19:15"))
+                count = current_app.redis.hget(key, "19:15")
+                if count:
+                    count = int(count)
+                else:
+                    count = 0
                 count += 1
                 current_app.redis.hset(key, "19:15", count)
             return jsonify(result=3, avatar=user.avatar_url, nick_name=user.nick_name)

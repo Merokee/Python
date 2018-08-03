@@ -1,0 +1,108 @@
+2018-07-22 15:00:26 [scrapy] INFO: Scrapy 1.1.1 started (bot: Tencent)
+2018-07-22 15:00:26 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'Tencent.spiders', 'SPIDER_MODULES': ['Tencent.spiders'], 'LOG_FILE': 'TencentSpider.log', 'BOT_NAME': 'Tencent'}
+2018-07-22 15:00:26 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-07-22 15:00:26 [scrapy] INFO: Enabled downloader middlewares:
+['Tencent.middlewares.RandomUserAgentMiddleware',
+ 'Tencent.middlewares.RandomProxyMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-07-22 15:00:26 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-07-22 15:00:26 [scrapy] INFO: Enabled item pipelines:
+['Tencent.pipelines.TencentListPipeline',
+ 'Tencent.pipelines.TencentDetailPipeline']
+2018-07-22 15:00:26 [scrapy] INFO: Spider opened
+2018-07-22 15:00:26 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-07-22 15:00:26 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-07-22 15:00:26 [root] INFO: {'User-Agent': ['Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_2) AppleWebKit/535.1 (KHTML, like Gecko) Chrome/14.0.835.186 Safari/535.1']}
+2018-07-22 15:00:26 [scrapy] DEBUG: Crawled (407) <GET http://hr.tencent.com/position.php?start=0&#a> (referer: None) ['partial']
+2018-07-22 15:00:26 [scrapy] DEBUG: Ignoring response <407 http://hr.tencent.com/position.php?start=0&>: HTTP status code is not handled or not allowed
+2018-07-22 15:00:26 [scrapy] INFO: Closing spider (finished)
+2018-07-22 15:00:26 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 317,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 111,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/407': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 7, 22, 7, 0, 26, 545696),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 7, 22, 7, 0, 26, 267669)}
+2018-07-22 15:00:26 [scrapy] INFO: Spider closed (finished)
+2018-07-22 15:01:22 [scrapy] INFO: Scrapy 1.1.1 started (bot: Tencent)
+2018-07-22 15:01:22 [scrapy] INFO: Overridden settings: {'NEWSPIDER_MODULE': 'Tencent.spiders', 'SPIDER_MODULES': ['Tencent.spiders'], 'LOG_FILE': 'TencentSpider.log', 'BOT_NAME': 'Tencent'}
+2018-07-22 15:01:22 [scrapy] INFO: Enabled extensions:
+['scrapy.extensions.logstats.LogStats',
+ 'scrapy.extensions.telnet.TelnetConsole',
+ 'scrapy.extensions.corestats.CoreStats']
+2018-07-22 15:01:22 [scrapy] INFO: Enabled downloader middlewares:
+['Tencent.middlewares.RandomProxyMiddleware',
+ 'Tencent.middlewares.RandomUserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.httpauth.HttpAuthMiddleware',
+ 'scrapy.downloadermiddlewares.downloadtimeout.DownloadTimeoutMiddleware',
+ 'scrapy.downloadermiddlewares.useragent.UserAgentMiddleware',
+ 'scrapy.downloadermiddlewares.retry.RetryMiddleware',
+ 'scrapy.downloadermiddlewares.defaultheaders.DefaultHeadersMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.MetaRefreshMiddleware',
+ 'scrapy.downloadermiddlewares.httpcompression.HttpCompressionMiddleware',
+ 'scrapy.downloadermiddlewares.redirect.RedirectMiddleware',
+ 'scrapy.downloadermiddlewares.cookies.CookiesMiddleware',
+ 'scrapy.downloadermiddlewares.chunked.ChunkedTransferMiddleware',
+ 'scrapy.downloadermiddlewares.stats.DownloaderStats']
+2018-07-22 15:01:22 [scrapy] INFO: Enabled spider middlewares:
+['scrapy.spidermiddlewares.httperror.HttpErrorMiddleware',
+ 'scrapy.spidermiddlewares.offsite.OffsiteMiddleware',
+ 'scrapy.spidermiddlewares.referer.RefererMiddleware',
+ 'scrapy.spidermiddlewares.urllength.UrlLengthMiddleware',
+ 'scrapy.spidermiddlewares.depth.DepthMiddleware']
+2018-07-22 15:01:22 [scrapy] INFO: Enabled item pipelines:
+['Tencent.pipelines.TencentListPipeline',
+ 'Tencent.pipelines.TencentDetailPipeline']
+2018-07-22 15:01:22 [scrapy] INFO: Spider opened
+2018-07-22 15:01:22 [scrapy] INFO: Crawled 0 pages (at 0 pages/min), scraped 0 items (at 0 items/min)
+2018-07-22 15:01:22 [scrapy] DEBUG: Telnet console listening on 127.0.0.1:6023
+2018-07-22 15:01:22 [root] INFO: {'User-Agent': ['Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/536.6 (KHTML, like Gecko) Chrome/20.0.1092.0 Safari/536.6']}
+2018-07-22 15:01:23 [scrapy] DEBUG: Crawled (407) <GET http://hr.tencent.com/position.php?start=0&#a> (referer: None) ['partial']
+2018-07-22 15:01:23 [scrapy] DEBUG: Ignoring response <407 http://hr.tencent.com/position.php?start=0&>: HTTP status code is not handled or not allowed
+2018-07-22 15:01:23 [scrapy] INFO: Closing spider (finished)
+2018-07-22 15:01:23 [scrapy] INFO: Dumping Scrapy stats:
+{'downloader/request_bytes': 305,
+ 'downloader/request_count': 1,
+ 'downloader/request_method_count/GET': 1,
+ 'downloader/response_bytes': 110,
+ 'downloader/response_count': 1,
+ 'downloader/response_status_count/407': 1,
+ 'finish_reason': 'finished',
+ 'finish_time': datetime.datetime(2018, 7, 22, 7, 1, 23, 196523),
+ 'log_count/DEBUG': 3,
+ 'log_count/INFO': 8,
+ 'response_received_count': 1,
+ 'scheduler/dequeued': 1,
+ 'scheduler/dequeued/memory': 1,
+ 'scheduler/enqueued': 1,
+ 'scheduler/enqueued/memory': 1,
+ 'start_time': datetime.datetime(2018, 7, 22, 7, 1, 22, 837980)}
+2018-07-22 15:01:23 [scrapy] INFO: Spider closed (finished)

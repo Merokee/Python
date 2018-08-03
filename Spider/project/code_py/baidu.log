@@ -1,0 +1,335 @@
+2018-07-29 16:52:59 engine.py [line:52] INFO: Start time : 2018-07-29 16:52:59.450112
+2018-07-29 16:54:30 engine.py [line:52] INFO: Start time : 2018-07-29 16:54:30.163001
+2018-07-29 16:58:34 engine.py [line:52] INFO: Start time : 2018-07-29 16:58:34.803634
+2018-07-29 17:02:11 engine.py [line:53] INFO: Start time : 2018-07-29 17:02:11.232748
+2018-07-29 17:03:18 engine.py [line:53] INFO: Start time : 2018-07-29 17:03:18.957410
+2018-07-29 17:10:32 engine.py [line:53] INFO: Start time : 2018-07-29 17:10:32.640694
+2018-07-29 17:18:53 engine.py [line:53] INFO: Start time : 2018-07-29 17:18:53.007825
+2018-07-29 17:21:35 engine.py [line:53] INFO: Start time : 2018-07-29 17:21:35.309056
+2018-07-29 17:23:46 engine.py [line:53] INFO: Start time : 2018-07-29 17:23:46.466299
+2018-07-29 17:44:35 engine.py [line:53] INFO: Start time : 2018-07-29 17:44:35.489196
+2018-07-29 17:50:27 engine.py [line:53] INFO: Start time : 2018-07-29 17:50:27.637634
+2018-07-29 17:53:56 engine.py [line:53] INFO: Start time : 2018-07-29 17:53:56.111060
+2018-07-29 18:00:21 engine.py [line:53] INFO: Start time : 2018-07-29 18:00:21.638680
+2018-07-29 18:00:22 engine.py [line:59] INFO: End time : 2018-07-29 18:00:22.541917
+2018-07-29 18:00:22 engine.py [line:62] INFO: Useing time : 0.903237
+2018-07-29 18:01:09 engine.py [line:53] INFO: Start time : 2018-07-29 18:01:09.206240
+2018-07-29 18:01:10 engine.py [line:59] INFO: End time : 2018-07-29 18:01:10.084062
+2018-07-29 18:01:10 engine.py [line:62] INFO: Useing time : 0.877822
+2018-07-29 18:03:44 engine.py [line:53] INFO: Start time : 2018-07-29 18:03:44.910427
+2018-07-29 18:17:48 engine.py [line:53] INFO: Start time : 2018-07-29 18:17:48.496921
+2018-07-29 18:20:31 engine.py [line:53] INFO: Start time : 2018-07-29 18:20:31.854291
+2018-07-29 18:20:33 engine.py [line:59] INFO: End time : 2018-07-29 18:20:33.095437
+2018-07-29 18:20:33 engine.py [line:62] INFO: Useing time : 1.241146
+2018-07-30 09:45:19 engine.py [line:53] INFO: Start time : 2018-07-30 09:45:19.124161
+2018-07-30 09:45:20 engine.py [line:59] INFO: End time : 2018-07-30 09:45:20.095624
+2018-07-30 09:45:20 engine.py [line:62] INFO: Useing time : 0.971463
+2018-07-30 10:22:53 engine.py [line:60] INFO: Start time : 2018-07-30 10:22:53.538411
+2018-07-30 10:26:58 engine.py [line:60] INFO: Start time : 2018-07-30 10:26:58.102752
+2018-07-30 10:26:58 engine.py [line:66] INFO: End time : 2018-07-30 10:26:58.104657
+2018-07-30 10:26:58 engine.py [line:69] INFO: Useing time : 0.001905
+2018-07-30 10:32:39 engine.py [line:60] INFO: Start time : 2018-07-30 10:32:39.495750
+2018-07-30 10:32:39 engine.py [line:66] INFO: End time : 2018-07-30 10:32:39.497231
+2018-07-30 10:32:39 engine.py [line:69] INFO: Useing time : 0.001481
+2018-07-30 10:33:33 engine.py [line:60] INFO: Start time : 2018-07-30 10:33:33.339835
+2018-07-30 10:33:33 engine.py [line:66] INFO: End time : 2018-07-30 10:33:33.341589
+2018-07-30 10:33:33 engine.py [line:69] INFO: Useing time : 0.001754
+2018-07-30 10:34:47 engine.py [line:60] INFO: Start time : 2018-07-30 10:34:47.184516
+2018-07-30 10:34:47 engine.py [line:66] INFO: End time : 2018-07-30 10:34:47.186253
+2018-07-30 10:34:47 engine.py [line:69] INFO: Useing time : 0.001737
+2018-07-30 10:39:11 engine.py [line:60] INFO: Start time : 2018-07-30 10:39:11.065974
+2018-07-30 10:39:11 engine.py [line:66] INFO: End time : 2018-07-30 10:39:11.067806
+2018-07-30 10:39:11 engine.py [line:69] INFO: Useing time : 0.001832
+2018-07-30 10:43:13 engine.py [line:60] INFO: Start time : 2018-07-30 10:43:13.998887
+2018-07-30 10:43:14 engine.py [line:66] INFO: End time : 2018-07-30 10:43:14.000458
+2018-07-30 10:43:14 engine.py [line:69] INFO: Useing time : 0.001571
+2018-07-30 11:00:11 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 11:00:11 engine.py [line:66] INFO: Start time : 2018-07-30 11:00:11.345159
+2018-07-30 11:04:45 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 11:06:59 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 11:06:59 engine.py [line:66] INFO: Start time : 2018-07-30 11:06:59.165493
+2018-07-30 11:12:30 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 11:12:30 engine.py [line:66] INFO: Start time : 2018-07-30 11:12:30.044288
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 11:12:30 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 11:12:31 engine.py [line:129] INFO: Response_url: <http://news.baidu.com/>
+2018-07-30 11:12:32 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 11:12:33 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 11:12:36 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 11:12:42 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 11:12:43 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 11:15:04 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 11:15:04 engine.py [line:66] INFO: Start time : 2018-07-30 11:15:04.816867
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 11:15:04 engine.py [line:111] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 11:15:05 engine.py [line:129] INFO: Response_url: <http://news.baidu.com/>
+2018-07-30 11:15:07 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 11:15:08 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 11:15:09 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 11:15:10 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 11:15:10 engine.py [line:129] INFO: Response_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 11:26:12 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 11:26:12 engine.py [line:66] INFO: Start time : 2018-07-30 11:26:12.285877
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 11:26:12 engine.py [line:115] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 11:26:12 engine.py [line:133] INFO: Response_url: <http://www.baidu.com/>
+2018-07-30 11:26:13 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 11:26:14 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 11:26:14 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 11:26:15 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 11:26:16 engine.py [line:133] INFO: Response_url: <http://news.baidu.com/>
+2018-07-30 11:26:17 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 11:26:17 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 11:26:18 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 11:26:18 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 11:26:19 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 11:26:20 engine.py [line:133] INFO: Response_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 11:26:20 engine.py [line:102] INFO: Main Thread is over!
+2018-07-30 11:26:20 engine.py [line:72] INFO: End time : 2018-07-30 11:26:20.512152
+2018-07-30 11:26:20 engine.py [line:75] INFO: Useing time : 8.226275
+2018-07-30 15:49:34 scheduler.py [line:26] INFO: ROLE is <slave>
+2018-07-30 15:49:35 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:49:35 engine.py [line:66] INFO: Start time : 2018-07-30 15:49:35.349413
+2018-07-30 15:53:05 scheduler.py [line:26] INFO: ROLE is <master>
+2018-07-30 15:53:06 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:53:06 engine.py [line:66] INFO: Start time : 2018-07-30 15:53:06.044017
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 15:53:06 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 15:53:32 scheduler.py [line:26] INFO: ROLE is <slave>
+2018-07-30 15:53:33 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:53:33 engine.py [line:66] INFO: Start time : 2018-07-30 15:53:33.362812
+2018-07-30 15:53:35 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 15:53:37 engine.py [line:135] INFO: Response_url: <http://news.baidu.com/>
+2018-07-30 15:53:38 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 15:53:38 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 15:53:39 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 15:53:40 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 15:53:40 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 15:53:41 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 15:53:42 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 15:53:42 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 15:53:43 engine.py [line:135] INFO: Response_url: <http://www.baidu.com/>
+2018-07-30 15:53:44 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 15:54:21 scheduler.py [line:26] INFO: ROLE is <master>
+2018-07-30 15:54:21 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:54:21 engine.py [line:66] INFO: Start time : 2018-07-30 15:54:21.951602
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <http://www.baidu.com/>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <http://news.baidu.com>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=0>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=25>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=50>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=75>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=100>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=125>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=150>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=175>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=200>
+2018-07-30 15:54:21 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 15:54:21 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=225>
+2018-07-30 15:54:30 scheduler.py [line:26] INFO: ROLE is <master>
+2018-07-30 15:54:31 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:54:31 engine.py [line:66] INFO: Start time : 2018-07-30 15:54:31.290704
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <http://www.baidu.com/>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <http://news.baidu.com>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=0>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=25>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=50>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=75>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=100>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=125>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=150>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=175>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=200>
+2018-07-30 15:54:31 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 15:54:31 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=225>
+2018-07-30 15:55:25 scheduler.py [line:26] INFO: ROLE is <slave>
+2018-07-30 15:55:25 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:55:25 engine.py [line:66] INFO: Start time : 2018-07-30 15:55:25.804639
+2018-07-30 15:57:42 scheduler.py [line:26] INFO: ROLE is <slave>
+2018-07-30 15:57:42 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:57:42 engine.py [line:66] INFO: Start time : 2018-07-30 15:57:42.730181
+2018-07-30 15:58:16 scheduler.py [line:26] INFO: ROLE is <master>
+2018-07-30 15:58:16 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:58:16 engine.py [line:66] INFO: Start time : 2018-07-30 15:58:16.952296
+2018-07-30 15:58:16 engine.py [line:117] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 15:58:16 scheduler.py [line:64] INFO: Filter request: [GET] <http://www.baidu.com/>
+2018-07-30 15:58:16 engine.py [line:117] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 15:58:16 scheduler.py [line:64] INFO: Filter request: [GET] <http://news.baidu.com>
+2018-07-30 15:58:16 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 15:58:16 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=0>
+2018-07-30 15:58:16 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 15:58:16 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=25>
+2018-07-30 15:58:16 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 15:58:16 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=50>
+2018-07-30 15:58:17 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 15:58:17 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=75>
+2018-07-30 15:58:17 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 15:58:17 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=100>
+2018-07-30 15:58:17 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 15:58:17 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=125>
+2018-07-30 15:58:17 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 15:58:17 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=150>
+2018-07-30 15:58:17 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 15:58:17 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=175>
+2018-07-30 15:58:17 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 15:58:17 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=200>
+2018-07-30 15:58:17 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 15:58:17 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=225>
+2018-07-30 15:58:40 scheduler.py [line:26] INFO: ROLE is <slave>
+2018-07-30 15:58:40 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:58:40 engine.py [line:66] INFO: Start time : 2018-07-30 15:58:40.495327
+2018-07-30 15:58:47 scheduler.py [line:26] INFO: ROLE is <slave>
+2018-07-30 15:58:48 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:58:48 engine.py [line:66] INFO: Start time : 2018-07-30 15:58:48.210503
+2018-07-30 15:59:36 scheduler.py [line:26] INFO: ROLE is <master>
+2018-07-30 15:59:37 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 15:59:37 engine.py [line:66] INFO: Start time : 2018-07-30 15:59:37.713474
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <http://www.baidu.com/>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <http://news.baidu.com>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=0>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=25>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=50>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=75>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=100>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=125>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=150>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=175>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=200>
+2018-07-30 15:59:37 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 15:59:37 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=225>
+2018-07-30 16:17:28 scheduler.py [line:26] INFO: ROLE is <slave>
+2018-07-30 16:17:29 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 16:17:29 engine.py [line:66] INFO: Start time : 2018-07-30 16:17:29.315530
+2018-07-30 16:18:04 scheduler.py [line:26] INFO: ROLE is <master>
+2018-07-30 16:18:05 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 16:18:05 engine.py [line:66] INFO: Start time : 2018-07-30 16:18:05.808805
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <http://www.baidu.com/>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <http://news.baidu.com>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=0>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=25>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=50>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=75>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=100>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=125>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=150>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=175>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=200>
+2018-07-30 16:18:05 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 16:18:05 scheduler.py [line:64] INFO: Filter request: [GET] <https://movie.douban.com/top250?start=225>
+2018-07-30 16:18:54 scheduler.py [line:26] INFO: ROLE is <slave>
+2018-07-30 16:18:54 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 16:18:54 engine.py [line:66] INFO: Start time : 2018-07-30 16:18:54.422184
+2018-07-30 16:22:42 scheduler.py [line:26] INFO: ROLE is <slave>
+2018-07-30 16:22:42 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 16:22:42 engine.py [line:66] INFO: Start time : 2018-07-30 16:22:42.976572
+2018-07-30 16:23:25 scheduler.py [line:26] INFO: ROLE is <master>
+2018-07-30 16:23:26 engine.py [line:25] INFO: ASYNC TYPE ：<coroutine>
+2018-07-30 16:23:26 engine.py [line:66] INFO: Start time : 2018-07-30 16:23:26.093237
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <http://www.baidu.com/>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <http://news.baidu.com>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=50>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 16:23:26 engine.py [line:117] INFO: Request_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 16:23:26 engine.py [line:135] INFO: Response_url: <http://www.baidu.com/>
+2018-07-30 16:23:27 engine.py [line:135] INFO: Response_url: <http://news.baidu.com/>
+2018-07-30 16:23:27 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=25>
+2018-07-30 16:23:28 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=100>
+2018-07-30 16:23:29 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=175>
+2018-07-30 16:23:29 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=75>
+2018-07-30 16:23:31 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=125>
+2018-07-30 16:23:31 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=0>
+2018-07-30 16:23:32 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=225>
+2018-07-30 16:23:33 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=150>
+2018-07-30 16:23:33 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=200>
+2018-07-30 16:23:34 engine.py [line:135] INFO: Response_url: <https://movie.douban.com/top250?start=50>
